@@ -12,8 +12,9 @@ var bcrypt = require('bcrypt'),
     hash = bcrypt.hashSync("my password", salt);
 
 
-var MONGO_URI = 'mongodb://heroku_app28713039:aa1jom2tna3p736qs2gglg2b2o@ds063899.mongolab.com:63899/heroku_app28713039' ||
-                'mongodb://localhost/test';
+var MONGO_URI = 'mongodb://localhost/test'; 
+/*`var MONGO_URL = 'mongodb://heroku_app28713039:aa1jom2tna3p736qs2gglg2b2o@ds063899.mongolab.com:63899/heroku_app28713039' ||
+                'mongodb://localhost/test';*/
 
 // Localhost connection
 mongoose.connect(MONGO_URI);
