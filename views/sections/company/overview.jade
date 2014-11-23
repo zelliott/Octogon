@@ -24,7 +24,7 @@
 
     .block-info
       if (p && p.description)
-        div 
+        div
           | #{shorten(p.description)}
           a(href="http://www.crunchbase.com/organization/#{permalink}") read more on Crunchbase
       else
@@ -74,12 +74,12 @@
       ul.block-list
         //- TODO sort by date (most recent first)
         for m in c.milestones.sort(chronological).reverse()
-          li.milestone
-            .milestone-info
-              .title #{m.title}
-              .date #{moment(m.date).format('DD MMMM YYYY')}
-              .description #{m.description}
-            a.milestone-edit.edit-btn(data-toggle="modal" data-target="#edit-milestone" id='edit-'+m._id)
+          li.list-item
+            .item-info
+              .item-title #{m.title}
+              .item-date #{moment(m.date).format('DD MMMM YYYY')}
+              .item-text #{m.description}
+            a.item-edit.edit-btn(data-toggle="modal" data-target="#edit-milestone" id='edit-'+m._id)
               i.fa.fa-pencil
         //- FROM MERGE CONFLICT-- wasn't sure which would break
           //- li.list-item
@@ -129,7 +129,7 @@
                 img(src=m.img_path)
               else
                 div.placeholder-img
-              .item-header #{m.full_name} - 
+              .item-header #{m.full_name} -
                 span #{m.role}
               .item-date Joined #{moment(m.date_joined).format('DD MMMM YYYY')}
               .item-text: a(href='mailto:' + m.email) #{m.email}
@@ -158,4 +158,3 @@
           }(i))
         }
       });
-
