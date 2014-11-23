@@ -4,21 +4,21 @@
     i.fa.fa-dashboard.fa-right
     | Dashboard
 
-  if is_admin
-    a(href='../portfolio/' data-path='portfolio')
-      i.fa.fa-th.fa-right
-      | Portfolio
-    a(href='../data/', data-path='data')
-      i.fa.fa-table.fa-right
-      | Data
+  //- if is_admin
+  a(href='../portfolio/' data-path='portfolio')
+    i.fa.fa-th.fa-right
+    | Portfolio
+  a(href='../data/', data-path='data')
+    i.fa.fa-table.fa-right
+    | Data
 
 //- Right toolbar navigation
 .pull-right
-  a(href='../../settings' data-path='settings') 
+  a(href='../../settings' data-path='settings')
     i.fa.fa-gear.fa-right
     | #{username}
   a(href='../../login')
     i.fa.fa-bell.fa-right
   a(href='../../logout')
     i.fa.fa-sign-out.fa-right
-    | Sign out  
+    | Sign out
