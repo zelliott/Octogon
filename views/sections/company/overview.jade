@@ -76,7 +76,7 @@
         for m in c.milestones.sort(chronological).reverse()
           li.list-item
             .item-info
-              .item-title #{m.title}
+              .item-header #{m.title}
               .item-date #{moment(m.date).format('DD MMMM YYYY')}
               .item-text #{m.description}
             a.item-edit.edit-btn(data-toggle="modal" data-target="#edit-milestone" id='edit-'+m._id)
