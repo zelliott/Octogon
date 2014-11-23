@@ -13,8 +13,7 @@ var bcrypt = require('bcrypt'),
 
 
 //var MONGO_URI = 'mongodb://localhost/test';
-var MONGO_URL = 'mongodb://heroku_app31829860:uvmnhl5a6bi6iu357rgtok0k3i@ds051960.mongolab.com:51960/heroku_app31829860' ||
-                'mongodb://localhost/test';
+var MONGO_URL = 'mongodb://heroku_app31829860:uvmnhl5a6bi6iu357rgtok0k3i@ds051960.mongolab.com:51960/heroku_app31829860';
 
 // Localhost connection
 mongoose.connect(MONGO_URI);
